@@ -1,0 +1,162 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: Cascadia Code;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+.main-div {
+  padding: 1rem;
+}
+
+nav {
+  display: flex;
+  gap: 2rem;
+  color: blue;
+  font-weight: 700;
+  padding: 0.75rem;
+  width: auto;
+  background: rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(5px);
+}
+
+ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+body {
+  background-image: linear-gradient(
+    to right top,
+    #051937,
+    #004d7a,
+    #008793,
+    #00bf72,
+    #a8eb12
+  );
+  min-height: 100vh;
+}
+nav > a {
+  text-decoration: none;
+  font-size: 1.5rem;
+}
+nav > a:active {
+  text-decoration: none;
+  color: inherit;
+}
+nav > a:visited {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  border: 1px solid black;
+  padding: 0.5rem;
+  font-size: 1.5rem;
+  color: white;
+  font-weight: 600;
+  border-radius: 0.5rem;
+  background-image: linear-gradient(
+    to right top,
+    #d16ba5,
+    #c777b9,
+    #ba83ca,
+    #aa8fd8,
+    #9a9ae1,
+    #8aa7ec,
+    #79b3f4,
+    #69bff8,
+    #52cffe,
+    #41dfff,
+    #46eefa,
+    #5ffbf1
+  );
+  cursor: pointer;
+}
+
+.input-container {
+  position: relative;
+  display: inline-block;
+  transition: 0.75s ease-in;
+  border-radius: 2px 2px 0 0;
+}
+.input-container input {
+  border: none;
+  background: #0003;
+  padding: 0.5rem;
+  outline: none;
+  transition: 0.75s ease-in;
+  color: #fffa;
+}
+.input-container::after {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 2px;
+  max-width: fit-content;
+  background: linear-gradient(
+    to right,
+    #b10dc9,
+    #f012be 40%,
+    #7fdbff 60%,
+    #0074d9 75%
+  );
+  background-position: right;
+  min-height: auto;
+  transition: 0.75s cubic-bezier(0.8, 0, 0.2, 1);
+}
+.input-container:focus-within input {
+  background: #0004;
+  color: #fffc;
+  transition: 0.75s ease-in;
+}
+.input-container:focus-within::after {
+  background-position: left;
+}
+.card {
+  font-family: "Montserrat", sans-serif;
+  align-self: stretch;
+  bottom: 0;
+  right: 0;
+  margin: 3rem;
+  background-color: white;
+  border-radius: 12px;
+  display: flex;
+  width: 40vw;
+  position: absolute;
+  flex-direction: column;
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.02), 0 10px 10px rgba(0, 0, 0, 0);
+}
+.dollar {
+  color: #FFC168;
+}
+.upper-row {
+  display: flex;
+  justify-content: space-evenly;
+  padding-bottom: 25px;
+  padding-top: 10px;
+}
+
+.card-item {
+  margin: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.card-item span:first-child {
+  font-size: 0.7rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.card-item span:last-child {
+  font-size: 1.2rem;
+  font-weight: 300;
+}
